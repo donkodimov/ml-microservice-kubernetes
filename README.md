@@ -1,4 +1,4 @@
-[![<ORG_NAME>](https://circleci.com/gh/dnk/ml-microservice-kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/donkodimov/ml-microservice-kubernetes)
+[![CircleCI](https://circleci.com/gh/dnk/ml-microservice-kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/donkodimov/ml-microservice-kubernetes)
 
 ## Project Overview
 
