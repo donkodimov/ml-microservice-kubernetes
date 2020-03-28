@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: prediction
+  name: prediction
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+  selector:
+    service: prediction
+  type: NodePort
+status:
+  loadBalancer: {}

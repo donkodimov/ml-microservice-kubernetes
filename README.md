@@ -33,8 +33,55 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Make prediction(Docker): `./make_prediction.sh`
 
-### Kubernetes Steps
+### Running Deployment in Kubernetes
+
+1. Run the deployment: kubectl apply -f `prediction-deployment.yaml`
+2. Run the service: kubectl apply -f `prediction-service.yaml`
+3. Make prediction(Kubernetes): `./make_prediction_k8s.sh`
+
+
+
+### Kubernetes Steps on Linux
+
+### Install Minikuber single-node cluster:
+
+* Check if virtualization is supported:
+```
+grep -E --color 'vmx|svm' /proc/cpuinfo
+```
+
+* Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+* Install Minikube via direct download:
+```
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube
+```
+
+* Add the Minikube executable to your path:
+
+```
+sudo mkdir -p /usr/local/bin/
+sudo install minikube /usr/local/bin/
+```
+
+* Start up a local Kubernetes cluster:
+```
+minikube start --driver=virtualbox
+minikube status
+```
+Expected output:
+```
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+```
+
+
+
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally

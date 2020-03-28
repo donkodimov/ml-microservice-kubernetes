@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prediction
+  labels:
+    service: prediction
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: prediction
+  template:
+    metadata:
+      labels:
+        service: prediction
+    spec:
+      containers:
+      - name: prediction
+        image: donko/flaskapp
+        ports:
+        - containerPort: 80
