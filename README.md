@@ -35,15 +35,10 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 4. Make prediction(Docker): `./make_prediction.sh`
 
-### Running Deployment in Kubernetes
-
-1. Run the deployment: kubectl apply -f `prediction-deployment.yaml`
-2. Run the service: kubectl apply -f `prediction-service.yaml`
-3. Make prediction(Kubernetes): `./make_prediction_k8s.sh`
 
 
+## Kubernetes Steps on Linux
 
-### Kubernetes Steps on Linux
 
 ### Install Minikuber single-node cluster:
 
@@ -80,10 +75,8 @@ apiserver: Running
 kubeconfig: Configured
 ```
 
+### Running and expose Deployment in Kubernetes
 
-
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+1. Run the deployment: kubectl apply -f `prediction-deployment.yaml`
+2. Run the service: kubectl apply -f `prediction-service.yaml`
+3. Make prediction(Kubernetes): `./make_prediction_k8s.sh`
