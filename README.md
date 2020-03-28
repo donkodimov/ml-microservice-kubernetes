@@ -80,3 +80,9 @@ kubeconfig: Configured
 1. Run the deployment: kubectl apply -f `prediction-deployment.yaml`
 2. Run the service: kubectl apply -f `prediction-service.yaml`
 3. Make prediction(Kubernetes): `./make_prediction_k8s.sh`
+
+### Scale up and scale down the deployment:
+
+* Scale up to 6 replicas: `kubectl scale deployment prediction --replicas=6`
+* Scale down to 3 replicas: `kubectl scale deployment prediction --replicas=3`
+* Video file `scale-up-down.flv` shows the scale up and scale down characteristics of the kubernetes application.
