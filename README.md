@@ -86,3 +86,18 @@ kubeconfig: Configured
 * Scale up to 6 replicas: `kubectl scale deployment prediction --replicas=6`
 * Scale down to 3 replicas: `kubectl scale deployment prediction --replicas=3`
 * Video file `scale-up-down.flv` shows the scale up and scale down characteristics of the kubernetes application.
+
+### File description
+
+* Dockerfile - instructions for building Docker image
+* Makefile - File that organize the code compilation
+* app.py - File with the application logic 
+* make_prediction.sh - File for making a prediction for application running in Docker
+* make_prediction_k8s.sh - File for making a prediction for application running in Minikube Kubernetes cluster
+*	prediction-deployment.yaml - Run the application as a Kubernetes deployment
+*	prediction-service.yaml - Expose the deployment running in Kubernetes
+* requirements.txt - List of all of the Python packages that the prediction app depends on
+* run_docker.sh - This script builds a container from Dockerfiles, lists images and runs the app in Docker
+* run_kubernetes.sh - This script runs a Pod with an image from Dockerhub repo and forwards the container port to the host
+*	scale-up-down.flv - Demo video showing Kubernetes scale up/down capabilities
+* upload_docker.sh - This file tags and uploads an image to Docker Hub
