@@ -87,6 +87,11 @@ kubeconfig: Configured
 * Scale down to 3 replicas: `kubectl scale deployment prediction --replicas=3`
 * Video file `scale-up-down.flv` shows the scale up and scale down characteristics of the kubernetes application.
 
+### Delete or stop minikube cluster
+
+* `minikube delete`
+* `minikube stop`
+
 ### File description
 
 * Dockerfile - instructions for building Docker image
