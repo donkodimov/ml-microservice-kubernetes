@@ -77,8 +77,8 @@ kubeconfig: Configured
 
 ### Running and expose Deployment in Kubernetes
 
-1. Run the deployment: kubectl apply -f `prediction-deployment.yaml`
-2. Run the service: kubectl apply -f `prediction-service.yaml`
+1. Run the deployment: `kubectl apply -f prediction-deployment.yaml`
+2. Run the service: `kubectl apply -f prediction-service.yaml`
 3. Make prediction(Kubernetes): `./make_prediction_k8s.sh`
 
 ### Scale up and scale down the deployment:
